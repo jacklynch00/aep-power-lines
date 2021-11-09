@@ -1,31 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## About
+This project was designed and developed as a solo-project during the 2021 Ohio State HACK OHI/O Hackathon event. I chose the attempt the AEP Hackathon challenge which was asked us to create an easy way to injest and store hundreds, if not thousands, of images of AEP's power lines, power poles and transformers and then allow users to annotate and markup those images. This is in an effort to identify any poles or power lines that are down and need fixing. To solve this problem, I chose to create a webapp using the Next.js framework, paired with a serverless backend using Firebase Firestore, Firebase Storage (for storing images), and Firebase Cloud Functions.
 
-## Getting Started
+## Development on your machine
 
-First, run the development server:
+1. Clone the repository:
+```git clone https://github.com/jacklynch00/aep-power-lines.git```
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+2. Navigate to firebase and create a new project
+	- After creating the project, save the app configuration variables to a ```.env``` file in the root folder of the project
+		- Make sure to prefix the environment variables with ```NEXT_PUBLIC_```
+	- ```bash
+		NEXT_PUBLIC_API_KEY=______
+		NEXT_PUBLIC_AUTH_DOMAIN=______
+		NEXT_PUBLIC_PROJECT_ID=______
+		NEXT_PUBLIC_STORAGE_BUCKET=______
+		NEXT_PUBLIC_MESSAGING_SENDER_ID=______
+		NEXT_PUBLIC_APP_ID=______
+		```
+3. Once the environment file is created, you can execute the following to launch the development environment:
+	```bash
+	npm run dev
+	# or
+	yarn dev
+	```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
