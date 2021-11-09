@@ -10,10 +10,9 @@ const PoleTable = ({poles}) => {
       <thead>
         <Tr>
           <Th>Image Name</Th>
-          <Th>State</Th>
           <Th>Lat</Th>
           <Th>Lng</Th>
-          <Th>Altitude</Th>
+          <Th>Altitude (ft)</Th>
           <Th>Review Status</Th>
           <Th>Review</Th>
         </Tr>
@@ -23,9 +22,8 @@ const PoleTable = ({poles}) => {
           return (
             <Box as="tr" key={pole.id}>
               <Td>{pole.id}</Td>
-              <Td>State</Td>
-              <Td>{pole.latitude}</Td>
-              <Td>{pole.longitude}</Td>
+              <Td>{pole.latitude.toFixed(5)}</Td>
+              <Td>{pole.longitude.toFixed(5)}</Td>
               <Td>{pole.altitude}</Td>
               <Td>{getReviewStatus(pole.reviewStatus)}</Td>
               <Td>

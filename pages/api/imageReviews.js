@@ -12,11 +12,7 @@ const db = getFirestore();
 
 export default async (req, res) => {
   const imageName = req.query.imageName;
-  const uid = req.query.uid;
-
-  // if (typeof uid !== "undefined") {
-  // } else {
-  // }
+  // const uid = req.query.uid;
 
   const docRef = doc(db, "image_reviews", imageName);
   const docSnap = await getDoc(docRef);

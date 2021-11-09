@@ -29,20 +29,25 @@ const ImageReviewView = ({poleInfo}) => {
   const auth = useAuth();
   const toast = useToast();
 
+  const uid = auth.user?.uid;
   const [loading, setLoading] = useState(false);
   const [note, setNote] = useState("");
   const [annotation, setAnnotation] = useState({});
   const [annotations, setAnnotations] = useState([]);
   const [messages, setMessages] = useState([]);
 
-  const {data, error} = useSWR(
-    `/api/imageReviews?imageName=${poleInfo.imageName}`,
-    fetcher
-  );
+  // const {data, error} = useSWR(
+  //   `/api/imageReviews?imageName=${poleInfo.imageName}`,
+  //   fetcher
+  // );
 
-  useEffect(() => {}, [data]);
+  useEffect(async () => {
+    const resp = await fetch(
+      `/api/imageReviews?imageName=${poleInfo.imageName}`
+    );
 
-  const uid = auth.user?.uid;
+    console.log(resp);
+  });
 
   var pole_name = poleInfo.imageName;
   var latitude = poleInfo.latitude;
@@ -109,7 +114,7 @@ const ImageReviewView = ({poleInfo}) => {
         >
           <Annotation
             width="60%"
-            height="auto"
+            height="400px"
             alt="Image Preview"
             src={imageUrl}
             annotations={annotations}
@@ -160,7 +165,7 @@ const ImageReviewView = ({poleInfo}) => {
                 State
               </Text>
               <Tag ml="10px" backgroundColor="gray.200" color="gray.700">
-                {state}
+                N/A
               </Tag>
             </Box>
             <Heading

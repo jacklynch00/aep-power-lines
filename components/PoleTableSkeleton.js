@@ -22,9 +22,6 @@ const SkeletonRow = ({width}) => (
     <Td>
       <Skeleton height="10px" w={width} my={4} />
     </Td>
-    <Td>
-      <Skeleton height="10px" w={width} my={4} />
-    </Td>
   </Box>
 );
 
@@ -34,17 +31,15 @@ const SiteTableSkeleton = () => {
       <thead>
         <Tr>
           <Th>Image Name</Th>
-          <Th>State</Th>
           <Th>Lat</Th>
           <Th>Lng</Th>
-          <Th>Altitude</Th>
+          <Th>Altitude (ft)</Th>
           <Th>Review Status</Th>
           <Th>Review</Th>
         </Tr>
       </thead>
       <tbody>
         <SkeletonRow width="75px" />
-        <SkeletonRow width="125px" />
         <SkeletonRow width="50px" />
         <SkeletonRow width="50px" />
         <SkeletonRow width="70px" />

@@ -76,12 +76,14 @@ const AddImagesModal = () => {
                 control={control}
                 defaultValue=""
                 render={({field}) => (
-                  <Input
-                    {...field}
-                    type="file"
-                    multiple
-                    onChange={imagesSelected}
-                  />
+                  <label>
+                    <Input
+                      {...field}
+                      type="file"
+                      multiple
+                      onChange={imagesSelected}
+                    />
+                  </label>
                 )}
               />
               <FormLabel>NOTE: All Image File Names Must Be Unique!</FormLabel>

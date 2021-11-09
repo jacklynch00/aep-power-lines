@@ -1,8 +1,8 @@
-import Head from 'next/head';
-import { Flex } from '@chakra-ui/react';
+import Head from "next/head";
+import {Flex} from "@chakra-ui/react";
 
-import { useAuth } from '@/lib/auth';
-import Login from '@/components/Login';
+import {useAuth} from "@/lib/auth";
+import Login from "@/components/Login";
 
 export default function Home() {
   const auth = useAuth();
@@ -23,7 +23,7 @@ export default function Home() {
 
       {auth?.user ? (
         <>
-          <p>Logged In</p>
+          <p>Welcome!</p>
         </>
       ) : (
         <Login />

@@ -1,6 +1,7 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 admin.initializeApp();
+const fetch = require("node-fetch");
 const piexifjs = require("piexifjs");
 const path = require("path");
 const os = require("os");

@@ -22,6 +22,7 @@ export const Td = (props) => (
     borderBottom="1px solid"
     borderBottomColor="gray.100"
     textAlign="center"
+    maxW="50px"
     {...props}
   />
 );
