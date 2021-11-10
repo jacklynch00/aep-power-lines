@@ -1,7 +1,7 @@
 ## About
 This project was designed and developed as a solo-project during the 2021 Ohio State HACK OHI/O Hackathon event. I chose the attempt the AEP Hackathon challenge which was asked us to create an easy way to injest and store hundreds, if not thousands, of images of AEP's power lines, power poles and transformers and then allow users to annotate and markup those images. This is in an effort to identify any poles or power lines that are down and need fixing. To solve this problem, I chose to create a webapp using the Next.js framework, paired with a serverless backend using Firebase Firestore, Firebase Storage (for storing images), and Firebase Cloud Functions.
 
-###### Small Note
+### Small Note
 After the Hackathon was over, I needed to submit my code the contest, so I made a branch ```work-complete-during-hackathon``` that holds the code that I submitted. I have chosen to continue development of some of the features I wanted to implement, but did't have enough time to complete. As well as clean up the code and make it production ready.
 
 ## Development on your machine
