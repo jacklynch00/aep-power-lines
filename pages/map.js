@@ -34,7 +34,7 @@ const Map = () => {
       <div style={{height: "600px", width: "100%"}}>
         <GoogleMapReact
           // TODO: Fix the reference to be an env var
-          bootstrapURLKeys={{key: "AIzaSyBfVT9n46je5wsenLa1tRMrIVcbHb5h_9o"}}
+          bootstrapURLKeys={{key: process.env.NEXT_PUBLIC_GOOGLE_API_KEY}}
           defaultCenter={{
             lat: 38.1202621,
             lng: -82.87153
