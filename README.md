@@ -31,7 +31,7 @@ After the Hackathon was over, I needed to submit my code the contest, so I made 
 	```bash
 	npm run dev
 	# or
-	yarn dev
+	yarn run dev
 	```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
